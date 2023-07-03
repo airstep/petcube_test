@@ -1,0 +1,625 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Petcube</title>
+  <meta name="description" content="Never miss a moment with your furbabies">
+  <meta name="author" content="">
+
+  <meta property="og:title" content="Petcube">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:description" content="Never miss a moment with your furbabies">
+  <meta property="og:image" content="image.png">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="fonts/gothampro.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="logo" viewBox="0 0 106 35">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M27.6029 10.0254V25.5601L14.3852 33.3271L1.16309 25.5601V10.0254L14.3852 2.25781L27.6029 10.0254Z"
+        fill="white" />
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M4.69434 17.1579L5.52713 17.8889L6.3748 16.8905L7.45049 19.4176L8.45679 18.9741L6.69205 14.8164L4.69434 17.1579ZM9.80566 19.8416L10.6335 20.5686L11.4861 19.5747L12.5618 22.0973L13.5681 21.6584L11.7984 17.4961L9.80566 19.8416ZM25.906 24.5636L14.3807 31.3342L2.86035 24.5636V11.0172L14.3807 4.24609L25.906 11.0172V24.5636ZM14.3856 0.890625L0 9.34133V26.2427L14.3856 34.6934L28.7662 26.2427V9.34133L14.3856 0.890625ZM4.69434 17.1579L5.52713 17.8889L6.3748 16.8905L7.45049 19.4176L8.45679 18.9741L6.69205 14.8164L4.69434 17.1579ZM11.7984 17.4961L9.80566 19.8416L10.6335 20.5686L11.4861 19.5747L12.5618 22.0973L13.5681 21.6584L11.7984 17.4961ZM11.7984 17.4961L9.80566 19.8416L10.6335 20.5686L11.4861 19.5747L12.5618 22.0973L13.5681 21.6584L11.7984 17.4961ZM6.69205 14.8164L4.69434 17.1579L5.52713 17.8889L6.3748 16.8905L7.45049 19.4176L8.45679 18.9741L6.69205 14.8164ZM41.8129 16.9559H39.6367V12.2734H41.8327C43.2653 12.2734 44.0833 13.116 44.0833 14.5841C44.0833 16.0679 43.2356 16.9559 41.8129 16.9559ZM45.3412 11.2774C44.5282 10.4646 43.4128 10.0312 42.1141 10.0312H35.9375V12.2708H37.1718V24.2234H39.6355V19.1933H42.1141C44.7612 19.1933 46.6102 17.2958 46.6102 14.5815C46.6102 13.245 46.169 12.1043 45.3412 11.2774ZM51.8171 15.6836C52.9374 15.6836 53.6958 16.4404 53.8346 17.6664H49.3633C49.6855 16.4348 50.6026 15.6836 51.8171 15.6836ZM54.9103 21.173C54.8751 21.1982 54.8355 21.2234 54.7864 21.2587C54.3948 21.5564 53.4723 22.2572 52.2483 22.2572C50.6075 22.2572 49.4575 21.2234 49.2493 19.5989H56.1744L56.2091 19.3466C56.2289 19.1695 56.2686 18.7967 56.2686 18.5187C56.2686 15.6126 54.4939 13.6602 51.8518 13.6602C48.8527 13.6602 46.7559 15.8805 46.7559 19.059C46.7559 22.187 49.0163 24.4574 52.1343 24.4574C54.2114 24.4574 55.7426 23.246 56.0306 22.9993L56.2185 22.8475L55.1631 20.9913L54.9103 21.173ZM62.7971 21.9533L62.455 22.0285C62.455 22.0285 62.3063 22.0592 62.0783 22.0592C61.2752 22.0592 60.3185 21.7308 60.3185 20.1517V15.9742H62.6285V13.886H60.3185V11.207H57.949V13.886H56.6602V15.9742H57.9094V20.3686C57.9094 23.9154 60.6799 24.2988 61.8701 24.2988C62.2667 24.2988 62.5388 24.2589 62.5542 24.2589L62.802 24.2236V22.3115L62.7971 21.9533ZM72.0764 20.6684L71.8186 20.9661C71.8087 20.9757 70.7083 22.2168 69.0575 22.2168C67.5605 22.2168 65.9544 21.2234 65.9544 19.0383C65.9544 17.1822 67.2184 15.8402 68.9629 15.8402C69.4442 15.8402 69.9052 15.8296 70.7727 16.2539L71.5653 14.4023C71.2188 14.1601 70.9655 13.9982 70.5348 13.8721C69.9895 13.7162 69.4586 13.6602 68.9629 13.6602C65.8106 13.6602 63.5254 15.9305 63.5254 19.059C63.5254 22.187 65.7958 24.4574 68.9237 24.4574C71.5708 24.4574 72.9737 22.7471 73.0282 22.6714L73.1571 22.5145L72.0764 20.6684ZM80.7713 13.8867V18.997C80.7713 20.8032 79.7948 22.1407 77.9309 22.1407C76.8254 22.1407 76.4185 21.56 76.4185 20.0015V13.8968L72.835 13.8867V16.0713H74.0247V20.4248C74.0247 23.0987 75.1202 24.4564 77.4748 24.4564C78.9074 24.4564 80.3549 24.1587 80.8407 23.1295V24.2339H83.1805V21.9086V13.8867H80.7713ZM89.674 22.2757C88.0084 22.2757 87.25 20.6264 87.25 19.0927C87.25 17.0797 88.177 15.8789 89.7335 15.8789C91.181 15.8789 92.1526 17.1604 92.1526 19.0776C92.1526 20.9897 91.1562 22.2757 89.674 22.2757ZM90.0908 13.661C88.6979 13.661 87.8106 14.2367 87.3099 14.7261V10.0234H85.793H83.7061V12.0819L84.9007 12.0869V24.2358H87.2107V23.3584C87.7159 23.8629 88.5938 24.4582 89.9421 24.4582C92.6834 24.4582 94.6018 22.2379 94.6018 19.0599C94.6018 15.8305 92.7875 13.661 90.0908 13.661ZM100.644 15.6836C101.769 15.6836 102.523 16.4404 102.667 17.6664H98.1953C98.5175 16.4348 99.4296 15.6836 100.644 15.6836ZM103.737 21.173C103.702 21.1982 103.663 21.2234 103.618 21.2587C103.222 21.5564 102.299 22.2572 101.08 22.2572C99.4396 22.2572 98.2846 21.2234 98.0764 19.5989H105.006L105.036 19.3466C105.056 19.1695 105.096 18.7967 105.096 18.5187C105.096 15.6126 103.321 13.6602 100.684 13.6602C97.6799 13.6602 95.583 15.8805 95.583 19.059C95.583 22.187 97.8484 24.4574 100.966 24.4574C103.039 24.4574 104.575 23.246 104.858 22.9993L105.046 22.8475L103.99 20.9913L103.737 21.173Z"
+        fill="#171716" />
+    </symbol>
+    <symbol id="star" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M11.3312 17.5441C10.6471 17.1827 9.53109 17.1863 8.8539 17.5441L4.74584 19.7146C4.06175 20.076 3.61441 19.7407 3.74375 18.9829L4.52832 14.3858C4.65897 13.6203 4.31064 12.5548 3.76278 12.0181L0.439295 8.76241C-0.114147 8.22026 0.0649371 7.6891 0.822062 7.57854L5.41501 6.90783C6.17985 6.79614 7.0806 6.13396 7.4192 5.44448L9.47323 1.26193C9.81527 0.565432 10.3733 0.572457 10.7119 1.26193L12.7659 5.44448C13.108 6.14098 14.013 6.79727 14.7701 6.90783L19.363 7.57854C20.1279 7.69022 20.2937 8.22573 19.7458 8.76241L16.4223 12.0181C15.8689 12.5602 15.5275 13.628 15.6568 14.3858L16.4414 18.9829C16.572 19.7484 16.1165 20.0724 15.4393 19.7146L11.3312 17.5441Z"
+        fill="#FFB731" />
+    </symbol>
+    <symbol id="qr" viewBox="0 0 44 44">
+      <rect width="1.76" height="1.76" fill="#29292B" />
+      <rect x="1.76001" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="5.28003" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="7.03998" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="8.79999" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="15.84" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="24.64" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="33.44" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="36.96" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="38.72" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="40.48" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="1.75977" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="1.75977" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" y="1.75977" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="1.75977" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="22.88" y="1.75977" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="24.64" y="1.75977" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="1.75977" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="1.75977" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="1.75977" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="5.28003" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="7.03998" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="15.84" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="17.6" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="19.36" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="22.88" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="36.96" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="38.72" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="3.51953" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="5.2793" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" y="5.2793" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="5.28003" y="5.2793" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="7.03998" y="5.2793" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="5.2793" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="15.84" y="5.2793" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="17.6" y="5.2793" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="22.88" y="5.2793" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="24.64" y="5.2793" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="5.2793" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="5.2793" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="36.96" y="5.2793" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="38.72" y="5.2793" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="5.2793" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="7.03906" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" y="7.03906" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="5.28003" y="7.03906" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="7.03998" y="7.03906" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="7.03906" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" y="7.03906" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="15.84" y="7.03906" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="24.64" y="7.03906" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="7.03906" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="7.03906" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="36.96" y="7.03906" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="38.72" y="7.03906" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="7.03906" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="8.80078" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="8.80078" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" y="8.80078" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="8.80078" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="24.64" y="8.80078" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="8.80078" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="8.80078" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="1.76001" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="5.28003" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="7.03998" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="8.79999" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="17.6" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="24.64" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="33.44" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="36.96" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="38.72" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="40.48" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="10.5605" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" y="12.3203" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="12.3203" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="24.64" y="12.3203" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="26.4" y="12.3203" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="12.3203" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="1.76001" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="8.79999" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="17.6" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="24.64" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="29.92" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="33.44" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="40.48" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="14.0801" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" y="15.8398" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="5.28003" y="15.8398" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="15.84" y="15.8398" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="19.36" y="15.8398" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="22.88" y="15.8398" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="26.4" y="15.8398" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="15.8398" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="33.44" y="15.8398" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="36.96" y="15.8398" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="40.48" y="15.8398" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="15.8398" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="17.5996" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="1.76001" y="17.5996" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="17.5996" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="19.36" y="17.5996" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="26.4" y="17.5996" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="17.5996" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="33.44" y="17.5996" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="17.5996" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="36.96" y="17.5996" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="38.72" y="17.5996" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="17.5996" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="19.3594" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="1.76001" y="19.3594" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" y="19.3594" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="5.28003" y="19.3594" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="7.03998" y="19.3594" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="12.32" y="19.3594" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" y="19.3594" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="17.6" y="19.3594" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="19.3594" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="24.64" y="19.3594" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="19.3594" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="29.92" y="19.3594" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="36.96" y="19.3594" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="21.1191" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="15.84" y="21.1191" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="17.6" y="21.1191" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="19.36" y="21.1191" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="21.1191" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="26.4" y="21.1191" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="21.1191" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="21.1191" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="21.1191" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" y="22.8809" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="5.28003" y="22.8809" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="7.03998" y="22.8809" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="8.79999" y="22.8809" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="15.84" y="22.8809" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="19.36" y="22.8809" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="22.8809" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="26.4" y="22.8809" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="22.8809" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="29.92" y="22.8809" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="22.8809" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="33.44" y="22.8809" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="40.48" y="22.8809" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="22.8809" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="24.6406" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="1.76001" y="24.6406" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="8.79999" y="24.6406" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="24.6406" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" y="24.6406" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="15.84" y="24.6406" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="19.36" y="24.6406" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="24.6406" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="26.4" y="24.6406" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="24.6406" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="24.6406" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="36.96" y="24.6406" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="38.72" y="24.6406" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="24.6406" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" y="26.4004" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" y="26.4004" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="17.6" y="26.4004" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="24.64" y="26.4004" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="26.4" y="26.4004" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="33.44" y="26.4004" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="26.4004" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="36.96" y="26.4004" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="28.1602" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="1.76001" y="28.1602" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="7.03998" y="28.1602" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="28.1602" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="15.84" y="28.1602" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="28.1602" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="26.4" y="28.1602" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="28.1602" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="29.92" y="28.1602" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="28.1602" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="33.44" y="28.1602" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="28.1602" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="40.48" y="28.1602" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" y="29.9199" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="15.84" y="29.9199" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="19.36" y="29.9199" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="29.9199" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="29.9199" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="29.9199" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="29.9199" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="31.6797" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="1.76001" y="31.6797" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" y="31.6797" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="5.28003" y="31.6797" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="7.03998" y="31.6797" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="8.79999" y="31.6797" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="31.6797" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="19.36" y="31.6797" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="31.6797" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="22.88" y="31.6797" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="31.6797" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="31.6797" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="31.6797" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="31.6797" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="33.4395" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="33.4395" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" y="33.4395" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="33.4395" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="24.64" y="33.4395" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="26.4" y="33.4395" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="33.4395" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="33.4395" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="5.28003" y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="7.03998" y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="17.6" y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="19.36" y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="26.4" y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="29.92" y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="31.68" y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="33.44" y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="40.48" y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="35.1992" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="5.28003" y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="7.03998" y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="15.84" y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="17.6" y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="19.36" y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="24.64" y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="26.4" y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="29.92" y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="38.72" y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="36.9609" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="5.28003" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="7.03998" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="15.84" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="19.36" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="22.88" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="29.92" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="33.44" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="36.96" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="40.48" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="38.7207" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="40.4805" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="40.4805" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" y="40.4805" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="17.6" y="40.4805" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="40.4805" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="26.4" y="40.4805" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="40.4805" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="33.44" y="40.4805" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="35.2" y="40.4805" width="1.76" height="1.76" fill="#29292B" />
+      <rect y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="1.76001" y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="3.52002" y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="5.28003" y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="7.03998" y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="8.79999" y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="10.56" y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="14.08" y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="15.84" y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="17.6" y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="21.12" y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="24.64" y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="28.16" y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="36.96" y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+      <rect x="42.24" y="42.2402" width="1.76" height="1.76" fill="#29292B" />
+    </symbol>
+  </svg>
+
+  <div class="download-app">
+    <div>
+      <span>Download APP</span>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <header class="py-3 mb-4 border-bottom">
+      <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
+        <div>
+          <a href="/">
+            <svg width="106" height="35" role="img" aria-label="Petcube">
+              <use xlink:href="#logo"></use>
+            </svg>
+          </a>
+        </div>
+
+
+        <div class="d-flex gap-3">
+          <div class="desc">
+            <h3>Scan to download</h3>
+            <p>on iOS or Android</p>
+          </div>
+          <svg width="44" height="44" role="img" aria-label="QRCode">
+            <use xlink:href="#qr"></use>
+          </svg>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 gy-3">
+      <div class="col brand">
+        <img src="favicon.svg">
+        <span>Petcube App</span>
+        <h2>Never miss<br>a moment with<br>your furbabies</h2>
+        <div class="download">
+          <svg width="60" height="60" role="img" aria-label="QR">
+            <use xlink:href="#qr"></use>
+          </svg>
+          <div class="desc">
+            <h3>Scan to download</h3>
+            <p>on iOS or Android</p>
+          </div>
+        </div>
+      </div>
+      <div class="mockup-container">
+        <img id="mockup" src="i/mockup_1.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray">
+    <div class="container text-center core">
+      <h3>Give your pet a voice<br>with Petcube App</h3>
+      <p>See, talk, treat and play with your<br>pets anytime, anywhere</p>
+      <video autoplay loop muted playsinline class="container video-player">
+        <source src="video/video_1.mp4" type="video/mp4">
+      </video>
+
+      <div class="row row-cols-lg-3 feature-row">
+        <div class="feature col">
+          <img src="i/feature_image_1.png" />
+          <span>Stay connected</span>
+          <p>Say hello, soothe your pet, or prevent destructive behavior. With a natural, life-like sound, hear their
+            voice, and let them recognize yours.</p>
+        </div>
+        <div class="feature col">
+          <img src="i/feature_image_2.png" />
+          <span>Keep your pet engaged</span>
+          <p>Toss treats and play with laser from anywhere. Control the treats amount & set laser to autoplay mode, keep
+            your pet active even when you're away.</p>
+        </div>
+        <div class="feature col">
+          <img src="i/feature_image_3.png" />
+          <span>See things clearly</span>
+          <p>Wide-angle view and HD video with up to 30 feet in pitch-dark. With auto switch to night vision in low
+            light and no light conditions.</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container text-center emergency">
+      <h3>Promote your pet's<br>wellness and safety</h3>
+      <p>Get your personalized vet advice in minutes<br>and cover your emergency vet bills</p>
+      <div class="container">
+        <img class="img-banner" src="i/banner.png">
+      </div>
+    </div>
+
+    <div class="container text-center care">
+      <h3>Peace of mind is priceless</h3>
+      <p>Extra security to your pet and home with video history,<br>smart alerts with Petcube Care</p>
+      <video autoplay loop muted playsinline class="container video-player">
+        <source src="video/video_2.mp4" type="video/mp4">
+      </video>
+
+      <div class="row row-cols-lg-3 feature-row">
+        <div class="feature col">
+          <img src="i/feature_image_4.png" />
+          <span>Get alerts that matter</span>
+          <p>Get notified in real time about your pet's activity, with audio recognition of barking and meowing, and the
+            ability to tell the difference between pets and people. </p>
+        </div>
+        <div class="feature col">
+          <img src="i/feature_image_5.png" />
+          <span>Never miss a moment</span>
+          <p>Triggered by sound and motion detection, Petcube captures your pet's activities, so you can enjoy cute
+            moments, or catch them red-handed.</p>
+        </div>
+        <div class="feature col">
+          <img src="i/feature_image_6.png" />
+          <span>Secured Cloud Storage</span>
+          <p>30-second clips of your pet are stored securely in the cloud, protected by 256-bit AES encryption. Privacy
+            is our top priority. </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container text-center other">
+      <h3>Make the most of your<br>Petcube App experience</h3>
+      <p>Enhance your pet parenting with other<br>Petcube's products and services</p>
+      <div class="row row-cols-1 row-cols-md-2 gy-3">
+        <div class="col">
+          <img class="img-share" src="i/other_feature_share.png" />
+        </div>
+        <div class="col">
+          <img class="img-shop" src="i/other_feature_shop.png" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container text-center media">
+    <img class="img-media" src="i/media.png" />
+
+    <div class="row row-cols-1 row-cols-md-3 mb-3 mt-5 gy-3">
+      <div class="col text-start">
+        <div class="review p-4 rounded-5 no-border">
+          <div class="d-flex align-items-center">
+            <img src="i/user_pic_1.png" class="rounded-circle">
+            <div class="d-flex flex-column ms-3">
+              <span class="name">Ricky Campbell</span>
+              <span class="location">Huntington, WV</span>
+            </div>
+          </div>
+          <p class="stars">
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+          </p>
+          <h6>Timely Alert of Medical Emergency</h6>
+          <p>Petcube caught my dog's hive emergency. I went out of town, and my fiancée was working when she received an
+            alert. She noticed that one of our dogs wasn't acting right, and zooming in, she spotted severe hives all
+            over his body.</p>
+        </div>
+      </div>
+      <div class="col text-start">
+        <div class="review p-4 rounded-5 no-border">
+          <div class="d-flex align-items-center">
+            <img src="i/user_pic_2.png" class="rounded-circle">
+            <div class="d-flex flex-column ms-3">
+              <span class="name">Susan Williams</span>
+              <span class="location">Houston, TX</span>
+            </div>
+          </div>
+          <p class="stars">
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+          </p>
+          <h6>Asthma Attack Averted</h6>
+          <p>While at work, I received a notification alert and saw through the Petcube App that Ziggy was experiencing
+            a major attack. I immediately drove home and was able to give Ziggy her medication.</p>
+        </div>
+      </div>
+      <div class="col text-start">
+        <div class="review p-4 rounded-5 no-border">
+          <div class="d-flex align-items-center">
+            <img src="i/user_pic_3.png" class="rounded-circle">
+            <div class="d-flex flex-column ms-3">
+              <span class="name">Chris Donoghue</span>
+              <span class="location">Longmont, CO</span>
+            </div>
+          </div>
+          <p class="stars">
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+            <svg>
+              <use xlink:href="#star"></use>
+            </svg>
+          </p>
+          <h6>Sick Cat's Happy Return</h6>
+          <p>When Douglas ran away, we set up our Petcube outside the house, with motion detection on. At night, the pet
+            cam detected Douglas and notified us. We were able to run outside and bring him home.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    var index = 1;
+
+    window.onload = function () {
+
+      var mockups = [
+        "i/mockup_1.png",
+        "i/mockup_2.png",
+        "i/mockup_3.png",
+      ];
+
+      setInterval(changeImage, 5000);
+
+      function changeImage() {
+        // var total = 3;
+        if (index > mockups.length - 1)
+          index = index % mockups.length;
+        index += 1;
+
+        var el = document.getElementById("mockup");
+        el.src = mockups[index - 1];
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>
